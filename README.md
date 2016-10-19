@@ -1,7 +1,10 @@
 Weather-Station
 ===============
+This is a Fork of the supperb Weather code of docwelch ...
+I have added new code to use different sensors like UV sensor ( ML8511 ) from here = https://learn.sparkfun.com/tutorials/ml8511-uv-sensor-hookup-guide .
 
 This is a weather station created with components from Sparkfun. The Arduino firmware is a modified version of Sparkfun's Wimp Weather Station. While the Imp is an interesting device, I wanted to get the weather data back to a BeagleBone Black for further processing/evaluation. The BeagleBone Black can easily push the data to Weather Underground. 
+
 
 ##Equipment
 
