@@ -1,5 +1,5 @@
-Weather-Station
-===============
+Weather-Station / Estación Meteorológica
+========================================
 This is a Fork of the supperb Weather code of docwelch ...
 I have added new code to use different sensors like UV sensor ( ML8511 ) from here = https://learn.sparkfun.com/tutorials/ml8511-uv-sensor-hookup-guide .As i have a lot of problems with the sensors attached in the Weather Shield ( sometimes no good pressure measures ), i am using other sensor, the  BME280 GYBMEO ( Temp + Humidity + Pressure ) . With these i can use 1 meter cable to install the sensors ( uv + temp + humidity + pressure) in the weather meter and protect the arduino + xbee from corrosion in a watertight box .
 
