@@ -171,10 +171,14 @@ xbeeAPI.on('frame_object',function(frame){
         var dewpt=(((frame.data[26]<<8)+frame.data[27])/10);
         weatherArray.push(dewpt);//13
         dataArray.push('Dew Point: '+dewpt);
-        var batt='Battery level: '+(((frame.data[28]<<8)+frame.data[29])/100);
+	var batt='Battery level: '+(((frame.data[28]<<8)+frame.data[29])/100);
         dataArray.push(batt);
-        var light='Light Level: '+(((frame.data[30]<<8)+frame.data[31])/100);
-        dataArray.push(light);
+	    
+	// Aquí recogemos el valor solarradiation 
+        var solar=(((frame.data[30]<<8)+frame.data[31])/100);
+        dataArray.push('Solarradiation: '+solar);
+	weatherArray.push(solar);//14
+	//    
         console.log(dataArray);
         if (moment().date()!=today){
             today=moment().date();
@@ -207,7 +211,7 @@ function sendDataToWunderground(){
     var weatherData='humidity='+weatherArray[8]+'&tempf='+weatherArray[9]+'&baromin='+weatherArray[12]+'&dewptf='+weatherArray[13];
     weatherData+='&winddir='+weatherArray[0]+'&windspeedmph='+weatherArray[1]+'&windgustmph='+weatherArray[2]+'&windgustdir='+weatherArray[3];
     weatherData+='&windspdmph_avg2m='+weatherArray[4]+'&winddir_avg2m='+weatherArray[5]+'&windgustmph_10m='+weatherArray[6]+'&windgustdir_10m='+weatherArray[7];
-    weatherData+='&rainin='+weatherArray[10]+'&dailyrainin='+weatherArray[11];
+    weatherData+='&rainin='+weatherArray[10]+'&dailyrainin='+weatherArray[11]+'&solarradiation='+weatherArray[14];
     var pathString='/weatherstation/updateweatherstation.php?'+requiredInfo+weatherData+'&action=updateraw&realtime=1&rtfreq='+reportTime;
     console.log('http://rtupdate.wunderground.com'+pathString);
     http.get('http://rtupdate.wunderground.com'+pathString, function(res){
