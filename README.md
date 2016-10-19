@@ -23,7 +23,7 @@ You will need the [xbee-arduino library](https://code.google.com/p/xbee-arduino/
 If your are not going yo use the weather shield sensors and you wanted to use other type of sensors :
 
 Barometric sensor (bmp280) from adafruit (https://github.com/adafruit/Adafruit_BMP280_Library) . 
-If you are using sensor (BME280 GYBMEP) , you have to edit the library to change the address from 0x77 to 0x76 (https://github.com/adafruit/Adafruit_BME280_Library/issues/15) .
+If you are using sensor (BME280 GYBMEP) , you have to edit the library to change the address from 0x77 to 0x76 see : (https://github.com/adafruit/Adafruit_BME280_Library/issues/15) .
 
 UV sensor ( ML8511 ) you do not need library .
 
