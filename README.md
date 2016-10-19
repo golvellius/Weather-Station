@@ -1,7 +1,11 @@
 Weather-Station
 ===============
 This is a Fork of the supperb Weather code of docwelch ...
-I have added new code to use different sensors like UV sensor ( ML8511 ) from here = https://learn.sparkfun.com/tutorials/ml8511-uv-sensor-hookup-guide .
+I have added new code to use different sensors like UV sensor ( ML8511 ) from here = https://learn.sparkfun.com/tutorials/ml8511-uv-sensor-hookup-guide . Also i have a lot of problems with the sensors attached in the Weather Shield , so i am using sensor BME280 GYBMEO ( Temp + Humidity + Pressure ) . With these i can use 1 meter cable to install the sensors in the weather meter and protect the arduino + xbee from corrosion in a watertight box .
+
+Also with this code your able to send data to Weatherunderground + uv solarradiation. 
+
+As you can read from the original TEXT from docwelch :
 
 This is a weather station created with components from Sparkfun. The Arduino firmware is a modified version of Sparkfun's Wimp Weather Station. While the Imp is an interesting device, I wanted to get the weather data back to a BeagleBone Black for further processing/evaluation. The BeagleBone Black can easily push the data to Weather Underground. 
 
