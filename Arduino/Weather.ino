@@ -7,7 +7,9 @@
 
   This code reads all the various sensors (wind speed, direction, rain gauge, humidty, pressure, light, batt_lvl)
   and sends it, via XBee, to a BeagleBone Black. The BeagleBone black then forwards that data to Weather Underground.
-*/
+
+  Modificactions by golvellius October 2016 */
+
 
 // Modificado sólo la formula para calcular Hpa 
 // El resto es del original
